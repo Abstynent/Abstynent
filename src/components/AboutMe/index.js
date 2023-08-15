@@ -14,7 +14,7 @@ const AboutMeComponent = () => {
           Lukasz Jurkiewicz
         </h2>
         <h3 className="text-2xl py-1 md:text-3xl">Full Stack Web Developer</h3>
-        <p className="text-md py-5 leading-8 text-gray-600 md:text-xl  mx-auto">
+        <p className="text-md py-5 leading-8 text-gray-600 sm:text-md sm:leading-6 md:text-xl  mx-auto">
           Passionate and driven full-stack developer with a proven track record
           of expertise across a diverse spectrum of technologies. My primary
           objective is to craft extraordinary web applications that provide
@@ -27,7 +27,7 @@ const AboutMeComponent = () => {
         </p>
       </div>
 
-      <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600">
+      <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600 lg:gap-32">
         <AiFillGithub />
         <AiFillLinkedin />
         <AiFillTwitterCircle />

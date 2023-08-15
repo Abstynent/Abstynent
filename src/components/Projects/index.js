@@ -47,7 +47,7 @@ const ClickableImage = ({ src, url, repo }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const imageContainerStyle = {
-    width: "400px",
+    width: "350px",
     height: "250px",
   };
 
@@ -87,10 +87,10 @@ const ClickableImage = ({ src, url, repo }) => {
 
 const ProjectsComponent = () => {
   return (
-    <section className="bg-teal-400 ">
+    <section className="bg-teal-400">
       <h3 className="text-3xl py-1">Portfolio</h3>
 
-      <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row lg:flex-wrap mx-10">
+      <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row lg:flex-wrap">
         {portfolioProjects.map((project, index) => (
           <div key={index}>
             <ClickableImage

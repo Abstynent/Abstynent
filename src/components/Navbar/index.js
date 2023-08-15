@@ -6,7 +6,6 @@ const NavbarComponent = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <section className="min-h-screen">
       <nav className="py-10 mb-12 flex justify-between">
         <h1 className="text-xl font-burtons">wookash</h1>
         <ul className="flex items-center">
@@ -28,7 +27,6 @@ const NavbarComponent = () => {
           </li>
         </ul>
       </nav>
-    </section>
   );
 };
 

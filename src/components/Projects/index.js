@@ -13,39 +13,44 @@ import oldPortfolioImg from "../../img/old-portfolio.png";
 const portfolioProjects = [
   {
     image: cookLenseImg,
+    alt: "Cooklense - A recipe sharing platform",
     url: "https://cooklense-6466eecac055.herokuapp.com/",
     repo: "https://github.com/kristiyantefov/Cooklense",
   },
   {
     image: socioSynergyImg,
+    alt: "SocioSynergy - A social media platform",
     url: "https://socio5ynergy.herokuapp.com/",
     repo: "https://github.com/Ze7Hu/SocioSynergy",
   },
   {
     image: mealPlanImg,
+    alt: "Meal Plan App - Plan and manage your meals",
     url: "https://abstynent.github.io/project1-meal-plan-app/",
     repo: "https://github.com/Abstynent/project1-meal-plan-app",
   },
   {
     image: ttbImg,
+    alt: "The Tech Blog - A platform for tech enthusiasts",
     url: "https://ttb-478af9121bfb.herokuapp.com/",
     repo: "https://github.com/Abstynent/the-tech-blog",
   },
   {
     image: oldPortfolioImg,
+    alt: "Old Portfolio - My previous portfolio website",
     url: "https://abstynent.github.io/portfolio/",
     repo: "https://github.com/Abstynent/portfolio",
   },
   {
     image: weatherImg,
+    alt: "5D Weather Forecast - Weather forecasting application",
     url: "https://abstynent.github.io/5d-weather-forecast/",
     repo: "https://github.com/Abstynent/5d-weather-forecast",
   },
 ];
 
-const ClickableImage = ({ src, url, repo }) => {
+const ClickableImage = ({ src, url, repo, alt }) => {
   const [isHovered, setIsHovered] = useState(false);
-
   const imageContainerStyle = {
     width: "350px",
     height: "250px",
@@ -68,7 +73,7 @@ const ClickableImage = ({ src, url, repo }) => {
     >
       <img
         src={src}
-        alt="Clickable Image"
+        alt={alt}
         className="rounded-lg object-cover w-full h-full"
       />
       {isHovered && (
@@ -87,13 +92,14 @@ const ClickableImage = ({ src, url, repo }) => {
 
 const ProjectsComponent = () => {
   return (
-    <section className="bg-teal-400">
-      <h3 className="text-3xl py-1">Portfolio</h3>
+    <section className="bg-blue-500 min-h-screen">
+      <h3 className="text-3xl py-2 px-5 lg:px-8 lg:pt-5">My work</h3>
 
       <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row lg:flex-wrap">
         {portfolioProjects.map((project, index) => (
           <div key={index}>
             <ClickableImage
+              alt={project.alt}
               src={project.image}
               url={project.url}
               repo={project.repo}

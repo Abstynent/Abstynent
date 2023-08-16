@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaHtml5,
   FaJs,
-  FaNode,
   FaCss3Alt,
   FaReact,
   FaDatabase,
@@ -10,27 +9,93 @@ import {
   FaNodeJs,
   FaBootstrap,
   FaFeatherAlt,
+  FaDownload,
 } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
 
 const skillsData = [
   { name: "HTML", icon: FaHtml5 },
   { name: "JavaScript", icon: FaJs },
-  { name: "Node.js", icon: FaNode },
+  { name: "Node.js", icon: FaNodeJs },
   { name: "CSS", icon: FaCss3Alt },
   { name: "React", icon: FaReact },
   { name: "MongoDB", icon: FaDatabase },
   { name: "SQL", icon: FaDatabase },
   { name: "GraphQL", icon: FaProjectDiagram },
-  { name: "Express", icon: FaNodeJs },
+  { name: "Express", icon: SiExpress },
   { name: "Bootstrap", icon: FaBootstrap },
   { name: "Tailwind CSS", icon: FaFeatherAlt },
 ];
 
 const ContactComponent = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [formErrors, setFormErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const validateForm = () => {
+    let errors = {};
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+      errors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Invalid email address";
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = "Message is required";
+      isValid = false;
+    }
+
+    setFormErrors(errors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      // form submit logic goes here
+      console.log("Form data:", formData);
+    }
+
+    // clear state
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+    setFormErrors({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
   return (
-    <section className="bg-green-200 min-h-screen">
+    <section className="bg-teal-300 min-h-screen">
       <h3 className="text-3xl py-2 px-5 lg:px-8 lg:pt-5">About Me</h3>
       <div className="container mx-auto mt-8 md:flex md:flex-wrap">
+        {/* Personal Info */}
         <div className="w-full md:w-1/3 pr-4">
           <h4 className="text-2xl py-5 px-5">Personal Info</h4>
           <ul className="leading-10">
@@ -56,11 +121,18 @@ const ContactComponent = () => {
             </li>
           </ul>
         </div>
+
+        {/* Skills */}
         <div className="w-full md:w-2/3 mt-4 md:mt-0">
-          <h4 className="text-center text-2xl py-5 px-5">Skills</h4>
+          <h4 className="text-left text-2xl py-5 px-5 lg:text-center">
+            Skills
+          </h4>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {skillsData.map((skill) => (
-              <li key={skill.name} className="text-2xl flex items-center gap-4 py-2 px-5">
+              <li
+                key={skill.name}
+                className="text-2xl flex items-center gap-4 py-2 px-5"
+              >
                 {React.createElement(skill.icon, {
                   className: "mr-2 text-gray-700",
                 })}
@@ -68,6 +140,89 @@ const ContactComponent = () => {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Download Resume Button */}
+        <div className="w-full md:w-1/3 pr-4">
+          <h4 className="text-2xl py-5 px-5"></h4>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center"
+            onClick={() => {
+              // download button logic
+            }}
+          >
+            <FaDownload className="mr-2" />
+            <span>Download CV</span>
+          </button>
+        </div>
+
+        {/* Contact Form */}
+        <div className="w-full md:w-2/3 mt-4 md:mt-0">
+          <h4 className="text-2xl py-5 px-5">Contact Form</h4>
+          <form className="px-5" onSubmit={handleSubmit}>
+            <div className="mb-4 relative">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                placeholder=" "
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+              <label
+                htmlFor="name"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+              >
+                Your Name
+              </label>
+            </div>
+            <div className="mb-4 relative">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                placeholder=" "
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+              <label
+                htmlFor="email"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+              >
+                Your Email
+              </label>
+            </div>
+            <div className="mb-4 relative">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                placeholder=" "
+                value={formData.me}
+                onChange={handleInputChange}
+                required
+              ></textarea>
+              <label
+                htmlFor="message"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+              >
+                Your Message
+              </label>
+            </div>
+            <div className="flex items-center justify-end">
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

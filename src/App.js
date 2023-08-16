@@ -1,6 +1,7 @@
 import "./App.css";
 import NavbarComponent from "./components/Navbar";
-import AboutMeComponent from "./components/AboutMe";
+import HomeComponent from "./components/Home";
+import ContactComponent from "./components/ContactComponent";
 import ProjectsComponent from "./components/Projects";
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <main className="">
       <section className="min-h-screen bg-white px-10 md:px-20 lg:px-40">
         <NavbarComponent />
-        <AboutMeComponent />
+        <HomeComponent />
       </section>
+      <ContactComponent />
       <ProjectsComponent />
     </main>
   );

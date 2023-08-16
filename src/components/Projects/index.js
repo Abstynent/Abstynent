@@ -54,6 +54,8 @@ const ClickableImage = ({ src, url, repo, alt }) => {
   const imageContainerStyle = {
     width: "350px",
     height: "250px",
+    transition: "transform 0.2s ease-in-out",
+    transform: isHovered ? "translateY(-10px)" : "translateY(0)",
   };
 
   const handleMouseEnter = () => {

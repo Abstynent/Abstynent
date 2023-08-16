@@ -4,6 +4,7 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
+  AiOutlineMail
 } from "react-icons/ai";
 
 const HomeComponent = () => {
@@ -31,6 +32,7 @@ const HomeComponent = () => {
         <AiFillGithub />
         <AiFillLinkedin />
         <AiFillTwitterCircle />
+        <AiOutlineMail />
       </div>
 
       <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 my-10 overflow-hidden md:h-96 md:w-96">

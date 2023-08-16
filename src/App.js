@@ -7,12 +7,12 @@ import ProjectsComponent from "./components/Projects";
 function App() {
   return (
     <main className="">
-      <section className="min-h-screen bg-white px-10 md:px-20 lg:px-40">
+      <section className="min-h-screen bg-gradient-to-b from-indigo-300 to-indigo-100 px-10 md:px-20 lg:px-40">
         <NavbarComponent />
         <HomeComponent />
       </section>
-      <ContactComponent />
       <ProjectsComponent />
+      <ContactComponent />
     </main>
   );
 }

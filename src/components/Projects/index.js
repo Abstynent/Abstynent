@@ -94,8 +94,8 @@ const ClickableImage = ({ src, url, repo, alt }) => {
 
 const ProjectsComponent = () => {
   return (
-    <section className="bg-blue-500 min-h-screen">
-      <h3 className="text-3xl py-2 px-5 lg:px-8 lg:pt-5">My work</h3>
+    <section id="portfolio" className="min-h-screen bg-gradient-to-t from-indigo-500 to-indigo-100 ">
+      <h3 className="text-5xl py-2 px-5 lg:px-8 lg:pt-5 min-w-screen">My work</h3>
 
       <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row lg:flex-wrap">
         {portfolioProjects.map((project, index) => (

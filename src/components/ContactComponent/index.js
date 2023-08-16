@@ -92,8 +92,8 @@ const ContactComponent = () => {
     });
   };
   return (
-    <section className="bg-teal-300 min-h-screen">
-      <h3 className="text-3xl py-2 px-5 lg:px-8 lg:pt-5">About Me</h3>
+    <section id="aboutMe" className="min-h-screen bg-gradient-to-b from-indigo-500 to-indigo-100 ">
+      <h3 className=" text-5xl py-2 px-5 lg:px-8 lg:pt-5">About Me</h3>
       <div className="container mx-auto mt-8 md:flex md:flex-wrap">
         {/* Personal Info */}
         <div className="w-full md:w-1/3 pr-4">
@@ -146,7 +146,7 @@ const ContactComponent = () => {
         <div className="w-full md:w-1/3 pr-4">
           <h4 className="text-2xl py-5 px-5"></h4>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center"
+            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center"
             onClick={() => {
               // download button logic
             }}
@@ -165,7 +165,7 @@ const ContactComponent = () => {
                 type="text"
                 id="name"
                 name="name"
-                className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                className="bg-indigo-100 block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
                 placeholder=" "
                 value={formData.name}
                 onChange={handleInputChange}
@@ -183,7 +183,7 @@ const ContactComponent = () => {
                 type="email"
                 id="email"
                 name="email"
-                className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                className="bg-indigo-100 block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
                 placeholder=" "
                 value={formData.email}
                 onChange={handleInputChange}
@@ -201,7 +201,7 @@ const ContactComponent = () => {
                 id="message"
                 name="message"
                 rows="4"
-                className="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
+                className="bg-indigo-100 block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 peer"
                 placeholder=" "
                 value={formData.me}
                 onChange={handleInputChange}
@@ -217,7 +217,7 @@ const ContactComponent = () => {
             <div className="flex items-center justify-end">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Submit
               </button>

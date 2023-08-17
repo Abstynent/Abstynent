@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { AiFillGithub, AiOutlineEye } from "react-icons/ai";
 
 // Projects pictures
-import cookLenseImg from "../../img/cooklense.png";
-import mealPlanImg from "../../img/mealplan.png";
-import socioSynergyImg from "../../img/sociosynergy.png";
-import ttbImg from "../../img/ttb.png";
-import weatherImg from "../../img/weather.png";
-import oldPortfolioImg from "../../img/old-portfolio.png";
+import cookLenseImg from "../../assets/cooklense.png";
+import mealPlanImg from "../../assets/mealplan.png";
+import socioSynergyImg from "../../assets/sociosynergy.png";
+import ttbImg from "../../assets/ttb.png";
+import weatherImg from "../../assets/weather.png";
+import oldPortfolioImg from "../../assets/old-portfolio.png";
 
 const portfolioProjects = [
   {

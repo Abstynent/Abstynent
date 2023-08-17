@@ -1,5 +1,5 @@
 import React from "react";
-import avatar from "../../img/avatar.png";
+import avatar from "../../assets/avatar.png";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
@@ -36,7 +36,7 @@ const HomeComponent = () => {
       </div>
 
       <div className="relative mx-auto bg-gradient-to-b from-indigo-500 rounded-full w-80 h-80 mt-10 overflow-hidden md:h-96 md:w-96 dark:from-gray-500">
-        <img src={avatar} />
+        <img src={avatar} alt="Emoji avatar waving."/>
       </div>
     </>
   );

@@ -12,6 +12,7 @@ import {
   FaDownload,
 } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
+import myCv from "../../assets/Lukasz_Jurkiewicz_Resume.pdf";
 
 const skillsData = [
   { name: "HTML", icon: FaHtml5 },
@@ -34,11 +35,11 @@ const AboutMeComponent = () => {
     message: "",
   });
 
-  const [formErrors, setFormErrors] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [formErrors, setFormErrors] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -67,7 +68,7 @@ const AboutMeComponent = () => {
       isValid = false;
     }
 
-    setFormErrors(errors);
+    // setFormErrors(errors);
     return isValid;
   };
 
@@ -85,12 +86,13 @@ const AboutMeComponent = () => {
       email: "",
       message: "",
     });
-    setFormErrors({
-      name: "",
-      email: "",
-      message: "",
-    });
+    // setFormErrors({
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    // });
   };
+
   return (
     <section
       id="aboutMe"
@@ -149,15 +151,12 @@ const AboutMeComponent = () => {
         <div id="resume" className="w-full md:w-1/3 pr-4">
           <h4 className="text-2xl py-5 px-5">Resume</h4>
           <div className="flex flex-col items-center justify-center h-full">
-            <button
-              className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center dark:bg-gray-500 dark:hover:bg-gray-400"
-              onClick={() => {
-                // download button logic
-              }}
-            >
-              <FaDownload className="mr-2 text-2xl lg:text-3xl" />
-              <span>Download CV</span>
-            </button>
+            <a href={myCv} target="_blank" rel="noopener noreferrer" download>
+              <button className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center dark:bg-gray-500 dark:hover:bg-gray-400">
+                <FaDownload className="mr-2 text-2xl lg:text-3xl" />
+                <span>Download CV</span>
+              </button>
+            </a>
           </div>
         </div>
 

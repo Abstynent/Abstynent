@@ -16,8 +16,13 @@
 
 </div>
 
+---
+
 ### :man_technologist: About Me :
 Hello, I'm Lukasz! Passionate and driven full-stack developer with a proven track record of expertise across a diverse spectrum of technologies. My primary objective is to craft extraordinary web applications that provide flawless user experiences. Through my comprehensive full-stack developer program at the University of Birmingham, I've honed hands-on proficiency with a wide array of cutting-edge technologies. I excel within collaborative team settings, leveraging my robust technical acumen to make impactful contributions to projects while consistently delivering innovative resolutions to intricate challenges.
+
+---
+
 ### :hammer_and_wrench: Languages and Tools :
 
 <div>
@@ -40,6 +45,7 @@ Hello, I'm Lukasz! Passionate and driven full-stack developer with a proven trac
     
 </div>
 
+---
 
 ### :fire: My Stats :
 

@@ -49,7 +49,7 @@ const portfolioProjects = [
   },
 ];
 
-const ClickableImage = ({ src, url, repo, alt }) => {
+const ClickableImage = ({ src, url, repo, alt, darkMode }) => {
   const [isHovered, setIsHovered] = useState(false);
   const imageContainerStyle = {
     width: "350px",
@@ -68,7 +68,7 @@ const ClickableImage = ({ src, url, repo, alt }) => {
 
   return (
     <div
-      className="relative cursor-pointer"
+      className={`relative cursor-pointer ${darkMode ? "grayscale" : ""}`}
       style={imageContainerStyle}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -92,15 +92,20 @@ const ClickableImage = ({ src, url, repo, alt }) => {
   );
 };
 
-const ProjectsComponent = () => {
+const ProjectsComponent = ({darkMode}) => {
   return (
-    <section id="portfolio" className="min-h-screen bg-gradient-to-t from-indigo-500 to-indigo-100 ">
-      <h3 className="text-5xl py-2 px-5 lg:px-8 lg:pt-5 min-w-screen">My work</h3>
+    <section
+      id="portfolio"
+      className="min-h-screen bg-gradient-to-t from-indigo-500 to-indigo-100 dark:from-gray-500 dark:to-gray-300"
+    >
+      <h3 className="text-5xl py-2 px-5 lg:px-8 lg:pt-5 min-w-screen">
+        My work
+      </h3>
 
       <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row lg:flex-wrap">
         {portfolioProjects.map((project, index) => (
           <div key={index}>
-            <ClickableImage
+            <ClickableImage darkMode={darkMode}
               alt={project.alt}
               src={project.image}
               url={project.url}

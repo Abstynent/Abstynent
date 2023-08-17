@@ -94,7 +94,7 @@ const AboutMeComponent = () => {
   return (
     <section
       id="aboutMe"
-      className="min-h-screen bg-gradient-to-b from-indigo-500 to-indigo-100 "
+      className="min-h-screen bg-gradient-to-b from-indigo-500 to-indigo-100  dark:from-gray-500 dark:to-gray-300 "
     >
       <h3 className=" text-5xl py-2 px-5 lg:px-8 lg:pt-5">About Me</h3>
       <div className="container mx-auto mt-8 md:flex md:flex-wrap">
@@ -150,7 +150,7 @@ const AboutMeComponent = () => {
           <h4 className="text-2xl py-5 px-5">Resume</h4>
           <div className="flex flex-col items-center justify-center h-full">
             <button
-              className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center"
+              className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center dark:bg-gray-500 dark:hover:bg-gray-400"
               onClick={() => {
                 // download button logic
               }}
@@ -222,7 +222,7 @@ const AboutMeComponent = () => {
             <div className="flex items-center justify-center pt-5 pb-10 lg:pb-0">
               <button
                 type="submit"
-                className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline dark:bg-gray-500 dark:hover:bg-gray-400"
               >
                 Submit
               </button>

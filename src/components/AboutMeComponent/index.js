@@ -12,7 +12,6 @@ import {
   FaDownload,
 } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-import myCv from "../../assets/Lukasz_Jurkiewicz_Resume.pdf";
 
 const skillsData = [
   { name: "HTML", icon: FaHtml5 },
@@ -29,6 +28,7 @@ const skillsData = [
 ];
 
 const AboutMeComponent = () => {
+  const myCv = "https://drive.google.com/file/d/1I2uBPn1PPqFiVdcmqCWnfcl0ONrh7zUA/view?usp=sharing";
   const [formData, setFormData] = useState({
     name: "",
     email: "",

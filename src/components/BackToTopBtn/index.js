@@ -33,7 +33,7 @@ const BackToTopButton = () => {
         isVisible ? "visible" : "invisible"
       }`}
     >
-      <BsFillArrowUpCircleFill className="text-5xl text-indigo-900"/>
+      <BsFillArrowUpCircleFill className="text-5xl text-indigo-900 hover:text-indigo-950"/>
     </button>
   );
 };

@@ -100,7 +100,7 @@ const AboutMeComponent = () => {
       <div className="container mx-auto mt-8 md:flex md:flex-wrap">
         {/* Personal Info */}
         <div className="w-full md:w-1/3 pr-4">
-          <h4 className="text-2xl py-5 px-5">Personal Info</h4>
+          <h4 className="text-3xl py-5 px-5">Personal Info</h4>
           <ul className="leading-10 px-5">
             <li className="flex">
               <span className="w-28 text-gray-700">Name:</span>
@@ -127,14 +127,14 @@ const AboutMeComponent = () => {
 
         {/* Skills */}
         <div className="w-full md:w-2/3 mt-4 md:mt-0">
-          <h4 className="text-left text-2xl py-5 px-5 lg:text-center">
+          <h4 className="text-left text-3xl py-5 px-5 lg:text-center">
             Skills
           </h4>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {skillsData.map((skill) => (
               <li
                 key={skill.name}
-                className="text-2xl flex items-center gap-4 py-2 px-5"
+                className="text-2xl flex items-center gap-4 py-2 px-5 hover:text-indigo-200 transition-colors duration-300"
               >
                 {React.createElement(skill.icon, {
                   className: "mr-2 text-gray-700",
@@ -219,7 +219,7 @@ const AboutMeComponent = () => {
                 Your Message
               </label>
             </div>
-            <div className="flex items-center justify-center pt-5 p-10">
+            <div className="flex items-center justify-center pt-5 pb-10 lg:pb-0">
               <button
                 type="submit"
                 className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

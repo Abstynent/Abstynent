@@ -31,7 +31,7 @@ const NavbarComponent = () => {
             <li>
               <a
                 href="#portfolio"
-                className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-md ml-8"
+                className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-md ml-8 hover:bg-indigo-600 hover:to-indigo-500"
               >
                 Portfolio
               </a>
@@ -39,7 +39,7 @@ const NavbarComponent = () => {
             <li>
               <a
                 href="#aboutMe"
-                className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-md ml-8"
+                className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-md ml-8 hover:bg-indigo-600 hover:to-indigo-500"
               >
                 About Me
               </a>
@@ -47,7 +47,7 @@ const NavbarComponent = () => {
             <li>
               <a
                 href="#resume"
-                className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-md ml-8"
+                className="bg-gradient-to-r from-indigo-500 to-indigo-400 text-white px-4 py-2 rounded-md ml-8 hover:bg-indigo-600 hover:to-indigo-500"
               >
                 Resume
               </a>

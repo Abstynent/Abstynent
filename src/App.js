@@ -3,6 +3,7 @@ import NavbarComponent from "./components/Navbar";
 import HomeComponent from "./components/Home";
 import ContactComponent from "./components/ContactComponent";
 import ProjectsComponent from "./components/Projects";
+import BackToTopButton from "./components/BackToTopBtn";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </section>
       <ProjectsComponent />
       <ContactComponent />
+      <BackToTopButton />
     </main>
   );
 }

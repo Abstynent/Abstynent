@@ -1,7 +1,7 @@
 import "./App.css";
 import NavbarComponent from "./components/Navbar";
 import HomeComponent from "./components/Home";
-import ContactComponent from "./components/ContactComponent";
+import AboutMeComponent from "./components/AboutMeComponent";
 import ProjectsComponent from "./components/Projects";
 import BackToTopButton from "./components/BackToTopBtn";
 
@@ -13,7 +13,7 @@ function App() {
         <HomeComponent />
       </section>
       <ProjectsComponent />
-      <ContactComponent />
+      <AboutMeComponent />
       <BackToTopButton />
     </main>
   );

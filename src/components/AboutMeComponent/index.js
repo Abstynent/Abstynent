@@ -27,7 +27,7 @@ const skillsData = [
   { name: "Tailwind CSS", icon: FaFeatherAlt },
 ];
 
-const ContactComponent = () => {
+const AboutMeComponent = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -92,13 +92,16 @@ const ContactComponent = () => {
     });
   };
   return (
-    <section id="aboutMe" className="min-h-screen bg-gradient-to-b from-indigo-500 to-indigo-100 ">
+    <section
+      id="aboutMe"
+      className="min-h-screen bg-gradient-to-b from-indigo-500 to-indigo-100 "
+    >
       <h3 className=" text-5xl py-2 px-5 lg:px-8 lg:pt-5">About Me</h3>
       <div className="container mx-auto mt-8 md:flex md:flex-wrap">
         {/* Personal Info */}
         <div className="w-full md:w-1/3 pr-4">
           <h4 className="text-2xl py-5 px-5">Personal Info</h4>
-          <ul className="leading-10">
+          <ul className="leading-10 px-5">
             <li className="flex">
               <span className="w-28 text-gray-700">Name:</span>
               <span>Lukasz Jurkiewicz</span>
@@ -143,17 +146,19 @@ const ContactComponent = () => {
         </div>
 
         {/* Download Resume Button */}
-        <div className="w-full md:w-1/3 pr-4">
-          <h4 className="text-2xl py-5 px-5"></h4>
-          <button
-            className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center"
-            onClick={() => {
-              // download button logic
-            }}
-          >
-            <FaDownload className="mr-2" />
-            <span>Download CV</span>
-          </button>
+        <div id="resume" className="w-full md:w-1/3 pr-4">
+          <h4 className="text-2xl py-5 px-5">Resume</h4>
+          <div className="flex flex-col items-center justify-center h-full">
+            <button
+              className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center"
+              onClick={() => {
+                // download button logic
+              }}
+            >
+              <FaDownload className="mr-2 text-2xl lg:text-3xl" />
+              <span>Download CV</span>
+            </button>
+          </div>
         </div>
 
         {/* Contact Form */}
@@ -214,10 +219,10 @@ const ContactComponent = () => {
                 Your Message
               </label>
             </div>
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-center pt-5 p-10">
               <button
                 type="submit"
-                className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-indigo-500 hover:bg-indigo-700 w-48 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Submit
               </button>
@@ -229,4 +234,4 @@ const ContactComponent = () => {
   );
 };
 
-export default ContactComponent;
+export default AboutMeComponent;

@@ -29,10 +29,10 @@ const HomeComponent = () => {
       </div>
 
       <div className="text-5xl flex justify-center gap-16 py-1 text-gray-600 lg:gap-32">
-        <AiFillGithub />
-        <AiFillLinkedin />
-        <AiFillTwitterCircle />
-        <AiOutlineMail />
+        <a href="https://github.com/Abstynent"><AiFillGithub className="hover:text-indigo-600" /></a>
+        <a href="https://www.linkedin.com/in/lukasz-j-117643259/"><AiFillLinkedin className="hover:text-indigo-600" /></a>
+        <a href="https://twitter.com/woo4ash"><AiFillTwitterCircle  className="hover:text-indigo-600"/></a>
+        <a href="mailto:luk.jur@outlook.com"><AiOutlineMail className="hover:text-indigo-600" /></a>
       </div>
 
       <div className="relative mx-auto bg-gradient-to-b from-indigo-500 rounded-full w-80 h-80 mt-10 overflow-hidden md:h-96 md:w-96">

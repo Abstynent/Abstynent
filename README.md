@@ -16,7 +16,7 @@
 
 </div>
 
-### :woman_technologist: About Me :
+### :man_technologist: About Me :
 Hello, I'm Lukasz! Passionate and driven full-stack developer with a proven track record of expertise across a diverse spectrum of technologies. My primary objective is to craft extraordinary web applications that provide flawless user experiences. Through my comprehensive full-stack developer program at the University of Birmingham, I've honed hands-on proficiency with a wide array of cutting-edge technologies. I excel within collaborative team settings, leveraging my robust technical acumen to make impactful contributions to projects while consistently delivering innovative resolutions to intricate challenges.
 ### :hammer_and_wrench: Languages and Tools :
 
@@ -36,6 +36,8 @@ Hello, I'm Lukasz! Passionate and driven full-stack developer with a proven trac
     <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="css" alt="css" width="40" height="40"/>&nbsp;
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" title="tailwindcss" alt="tailwindcss" width="40" height="40"/>&nbsp;
+    
 </div>
 
 
